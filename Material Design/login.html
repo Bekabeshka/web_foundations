@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  <title>Log in</title>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+   <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4 style="color: #c62828">Wrong</h4>
+      <p>Check the correctness of inputs</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
+
+  <div class="home"></div> 
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="card z-depth-4 valign-wrapper">
+          <div class="col l4 offset-l1">
+            <div class="banner z-depth-3"></div>
+          </div>
+          <div style="margin-top: -35px" class="col l7">
+            <div class="login center">
+              <div class="row center">
+                <h1 class="thin">Log In</h1>
+
+                <div class="input-field col l6 offset-l3">
+                  <input id="first_name" type="text">
+                  <label for="first_name">Login</label>
+                </div>
+                
+                <div class="input-field col l6 offset-l3">
+                  <input id="password" type="password">
+                  <label for="password">Password</label>
+                </div>
+
+              </div>
+              <a onclick="login()" class="waves-effect waves-light btn red darken-3">Log In</a>
+              <div style="display: block; margin-top: 10px;">
+                Don't hava account.<a href="signup.html">Sign up.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+  <script>
+    function login() {
+      var first_name = document.getElementById('first_name').value;
+      
+      var password = document.getElementById('password').value;
+
+      if (first_name.localeCompare(localStorage.getItem('first_name')) == 0 && password.localeCompare(localStorage.getItem('password')) == 0)
+        location.href = 'index.html'; 
+      else 
+        $('#modal1').modal('open');
+    }
+  </script>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+      $('.modal').modal();
+    });
+  </script>
+
+  <script>
+    $('#modal1').modal({
+      backdrop: 'static',
+      keyboard: false  // to prevent closing with Esc button (if you want this too)
+    });
+  </script>
+</body>
+</html>

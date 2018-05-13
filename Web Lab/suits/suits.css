@@ -1,0 +1,97 @@
+body {
+	margin: 0px;
+	min-height: 50vh;
+	background-color: #fff;
+	padding: 20px 20px 20px 20px;
+}
+
+div {
+	margin-bottom: 30px;
+}
+
+.checkbox {
+	width: 50px;
+	height: 50px;
+	border-width: 1px;
+	border-color: #000;
+	border-style: solid;
+}
+
+.check {
+	width: 33px;
+	height: 20px;
+	position: relative;
+	border-bottom: 2px solid green;
+	border-left: 2px solid green;
+	transform: rotate(315deg);
+	top: 7px;
+	left: 8px;
+	display: none;
+}
+
+.checkbox:active .check {
+	display: flex;
+}
+
+.hearts {
+	width: 60px;
+	height: 100px;
+	background-color: red;
+	border-radius: 100px 100px 0 0;
+	transform: rotate(315deg);
+}
+
+.hearts:after {
+	width: 100px;
+	height: 60px;
+	content: "";
+	position: absolute;
+	background-color: red;
+	border-radius: 0 50px 50px 0;
+	bottom: 0px;
+}
+
+.diamonds {
+	width: 90px;
+	height: 90px;
+	background-color: red;
+	transform: rotate(45deg);
+}
+
+.spades {
+	width: 60px;
+	height: 100px;
+	background-color: black;
+	border-radius: 100px 100px 0 0;
+	transform: rotate(135deg);	
+	margin-left: 30px;
+	margin-top: 50px;
+}
+
+.spades:after {
+	width: 100px;
+	height: 60px;
+	content: "";
+	position: absolute;
+	background-color: black;
+	border-radius: 0 50px 50px 0;
+	bottom: 0px;
+}
+
+.triangle {
+	position: relative;
+	width: 0px;
+	height: 0px;
+	margin: 0px;
+	border: 30px solid rgba(0,0,0,0);
+	border-bottom: 35px solid black;
+}
+
+.circle {
+	width: 60px;
+	height: 60px;
+	position: relative;
+	border-radius: 50%;
+	background-color: black;
+	margin: 0px;
+}

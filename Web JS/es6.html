@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+</head>
+<body>
+
+	<div id="calculator"></div>
+	
+	<script type="text/javascript">
+		class Calculator {
+			
+			constructor() {
+				this.result;
+				this.operation = '+';
+				
+				this.input = document.createElement('input');
+				document.getElementById('calculator').appendChild(this.input);
+
+			}
+
+			setStyles (element, styles) {
+				for (let key in styles)
+					element.style[key] = styles[key];
+			}
+
+			createButton(text, func) {
+				var btn = document.createElement('button');
+				btn.innerHTML = text.toString();
+				btn.addEventListener("click", func);
+				return btn;
+			}
+
+			
+		}
+
+		var form = document.createElement('form');
+
+		var br1 = document.createElement('br');
+		var br2 = document.createElement('br');
+
+		var radio1 = document.createElement('input');
+		radio1.type = 'radio';
+		radio1.name = 'system';
+		radio1.checked = true;
+		
+		var label1 = document.createElement('label');
+		label1.innerHTML = 'Decimal';
+		form.appendChild(radio1);
+		form.appendChild(label1);
+		form.appendChild(br1);
+
+		var radio2 = document.createElement('input');
+		radio2.name = 'system';
+		radio2.type = 'radio';
+		
+		var label2 = document.createElement('label');
+		label2.innerHTML = 'Binary';
+		form.appendChild(radio2);	
+		form.appendChild(label2);
+		form.appendChild(br2);
+
+		var label3 = document.createElement('label');
+		var radio3 = document.createElement('input');
+		radio3.name = 'system';
+		radio3.type = 'radio';
+		
+		label3.innerHTML = 'Octal';
+		form.appendChild(radio3);
+		form.appendChild(label3);
+
+		document.getElementById('calculator').appendChild(form);
+
+		var calculator = new Calculator();
+		calculator.setStyles(calculator.input, {
+			display:'block'
+		});	
+
+		for (let i = 0; i < 10; i++) {
+			document.getElementById('calculator').appendChild(calculator.createButton(i, function() {
+				calculator.input.value += i;
+			}));
+		}
+
+		let ops = ['+', '-', '*', '/'];
+		for (let i = 0; i < ops.length; i++) {
+			document.getElementById('calculator').appendChild(calculator.createButton(ops[i], function() {
+				calculator.input.value += ops[i];
+				calculator.operation = ops[i];
+			}));
+		}
+
+		document.getElementById('calculator').appendChild(calculator.createButton('=', function() {
+			
+			var result;
+			var arr = calculator.input.value.split(calculator.operation);
+
+			if (radio1.checked) {
+
+				switch(calculator.operation) {
+					case '+': result = parseInt(arr[0]) + parseInt(arr[1]);
+					break;
+					case '-': result = parseInt(arr[0]) - parseInt(arr[1]);
+					break;
+					case '/': result = parseInt(arr[0]) / parseInt(arr[1]);
+					break;
+					case '*': result = parseInt(arr[0]) * parseInt(arr[1]);
+					break;
+				}
+				calculator.input.value = result;
+
+			} else if (radio2.checked) {
+
+				switch(calculator.operation) {
+					case '+': result = parseInt(arr[0], 2) + parseInt(arr[1], 2);
+					break;
+					case '-': result = parseInt(arr[0], 2) - parseInt(arr[1], 2);
+					break;
+					case '/': result = parseInt(arr[0], 2) / parseInt(arr[1], 2);
+					break;
+					case '*': result = parseInt(arr[0], 2) * parseInt(arr[1], 2);
+					break;
+				}
+				calculator.input.value = result.toString(2);
+
+			} else if (radio3.checked) {
+
+				switch(calculator.operation) {
+					case '+': result = parseInt(arr[0], 8) + parseInt(arr[1], 8);
+					break;
+					case '-': result = parseInt(arr[0], 8) - parseInt(arr[1], 8);
+					break;
+					case '/': result = parseInt(arr[0], 8) / parseInt(arr[1], 8);
+					break;
+					case '*': result = parseInt(arr[0], 8) * parseInt(arr[1], 8);
+					break;
+				}
+				calculator.input.value = result.toString(8);
+
+			}
+		}
+		));
+
+	</script>
+</body>
+</html>

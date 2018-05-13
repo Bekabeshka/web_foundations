@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="icon" href="img/logo.png">
+	<title>Main</title>
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <div class="container">
+    <div id="modal1" style="width: 500px;" class="modal  valign-wrapper">
+      <div style="padding-bottom: 0px" class="modal-content">
+        <h4 class="center-align">Donut</h4>
+        <div class="center-align">
+          <img class="z-depth-3" src="img/p5.jpg" alt="">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis pariatur molestiae, neque quo. Maiores reprehenderit cum, tempore suscipit impedit corporis praesentium veritatis ducimus dolores officiis, odit amet debitis aliquam saepe?</p>
+        <p>$1</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="modal2" style="width: 500px;" class="modal valign-wrapper">
+      <div style="padding-bottom: 0px" class="modal-content">
+        <h4 class="center-align">Jelly</h4>
+        <div class="center-align">
+          <img class="z-depth-3" src="img/p6.jpg" alt="">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, impedit, atque. Magnam facere pariatur adipisci. Fugit, natus minima culpa. Iusto repellendus nulla beatae nihil id rerum, animi repudiandae officia magni!</p>
+        <p>$3</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="modal3" style="width: 500px;" class="modal  valign-wrapper">
+      <div style="padding-bottom: 0px" class="modal-content">
+        <h4 class="center-align">Yummy Bluberry Cobble</h4>
+        <div class="center-align">
+          <img class="z-depth-3" src="img/p4.jpg" alt="">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, impedit, atque. Magnam facere pariatur adipisci. Fugit, natus minima culpa. Iusto repellendus nulla beatae nihil id rerum, animi repudiandae officia magni!</p>
+        <p>$15</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+      </div>
+    </div>
+  </div>
+
+  <nav>
+    <div class="nav-wrapper red darken-3">
+      <div class="container">
+        <a href="#" data-activates="slide-out" class="brand-logo"><i class="material-icons">menu</i></a>
+        <ul id="slide-out" class="side-nav">
+          <li>
+            <div class="user-view">
+              <div class="background"></div>
+
+              <a href="#!user"><img class="circle" src="img/avatar.jpeg"></a>
+              <a id="first_name" href="#!name"><span class="white-text name"></span></a>
+              <a id="email" href="#!email"><span class="white-text email"></span></a>
+            </div>
+          </li>
+          <li><a href="#"><i class="material-icons">shopping_cart</i>My Cart</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader">Navigation</a></li>
+          <li><a class="waves-effect" href="#">Home</a></li>
+          <li><a class="waves-effect" href="#">Features</a></li>
+          <li><a class="waves-effect" href="#">Specials</a></li>
+          <li><a class="waves-effect" href="#">Menu</a></li>
+          <li><a class="waves-effect" href="#">Contact Us</a></li>
+          <li><div class="divider"></div></li>
+          <li><a href="#" onclick="logOut()"><i class="material-icons">exit_to_app</i>Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    function logOut() {
+      location.href = 'login.html'; 
+    }
+  </script>
+  
+  <div class="carousel carousel-slider center" data-indicators="true">
+    <div class="carousel-item one" href="#one!"></div>
+    <div class="carousel-item two" href="#two!"></div>
+    <div class="carousel-item three" href="#three!"></div>
+    <div class="carousel-item four" href="#four!"></div>
+    <div class="carousel-item five" href="#five!"></div>
+
+    <div class="row">
+      <div class="center cart z-depth-3">
+        <h1 style="color: #c62828" class="thin">Welcome</h1>
+        <h5 class="thin">We glat to see you</h5>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-bottom: 10px !important" class="jumbatron z-depth-3">
+    <div class="container">
+      <div class="row">
+        <div class="row center-align">
+          <h3 style="margin-bottom: 30px !important" class="center-align">Features</h3>
+          <div class="col l4 ">
+            <div class="feature z-depth-3">
+              <img src="img/icon1.png" alt="" />
+              <h4 class="light">High quality food</h4>
+              <p class="thin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate animi distinctio, repellendus dolore nam?</p>
+            </div>
+          </div>
+          <div class="col l4 ">
+            <div class="feature z-depth-3">
+              <img src="img/icon2.png" alt="" />
+              <h4 class="light">Reasonable prices</h4>
+              <p class="thin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat autem qui laborum nostrum deleniti.</p>
+            </div>
+          </div>
+          <div class="col l4 ">
+            <div class="feature z-depth-3">
+              <img src="img/icon3.png" alt="" />
+              <h4 class="light">Good service</h4>
+              <p class="thin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim necessitatibus commodi molestiae</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="img/footerbg.jpg"></div>
+  </div>
+
+  
+
+  <div class="jumbatron z-depth-3">
+    <div class="container">
+      <div class="row">
+        <div style="margin-bottom: 25px;" class="center">
+          <h3>Specials</h3>
+        </div>
+        <div class="col s12 m4">
+          <div class="card z-depth-5">
+            <div class="card-image">
+              <img src="img/p4.jpg">
+              <a href="#modal3" class="modal-trigger btn-floating halfway-fab waves-effect waves-light darken-3 red"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <span class="card-title flow-text">Yummy Bluberry Cobble</span>
+              <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quisquam placeat, rerum eligendi tenetur! Dolorem eveniet, deserunt iusto quasi. Pariatur hic provident quaerat consequatur ipsa illum quod maxime soluta sapiente.</p>
+              <p>15$</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card z-depth-5">
+            <div class="card-image">
+              <img src="img/p5.jpg">
+              <a href="#modal1" class="modal-trigger btn-floating halfway-fab waves-effect waves-light darken-3 red"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <span class="card-title flow-text">Donut</span>
+              <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est id consectetur aspernatur aut, odio, blanditiis assumenda aliquam ducimus, nulla earum pariatur asperiores libero fuga tempora magni dignissimos eius. Vitae, fuga!</p>
+              <p>1$</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card z-depth-5">
+            <div class="card-image">
+              <img src="img/p6.jpg">
+              <a href="#modal2" class="modal-trigger btn-floating halfway-fab waves-effect waves-light darken-3 red"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <span class="card-title flow-text">Jelly</span>
+              <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis pariatur molestiae, neque quo. Maiores reprehenderit cum, tempore suscipit impedit corporis praesentium veritatis ducimus dolores officiis, odit amet debitis aliquam saepe?</p>
+              <p>3$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="img/banner.jpg"></div>
+  </div>
+
+  <div id="menu" class="jumbatron z-depth-3">
+    <div class="container">
+      <div class="row">
+        <h3 class="center-align">MENU</h3>
+        <ul class="center-align pagination">
+          <li class="waves-effect flow-text"><a href="#!">Starters</a></li>
+          <li class="waves-effect flow-text"><a href="#!">Main Dishes</a></li>
+          <li class="waves-effect flow-text"><a href="#!">Desserts</a></li>
+          <li class="waves-effect flow-text"><a href="#!">Drink</a></li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <input class="asd" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for dish names.." title="Type in a name">      
+        <table id="myTable" class="striped">
+          <thead>
+            <tr>
+              <th><a style="color: #000 !important" href="#menu" onclick="sortTable(0)"><i class="material-icons">swap_vert</i></a> Dish Name</th>
+              <th><a style="color: #000 !important" href="#menu" onclick="sortTable(1)"><i class="material-icons">swap_vert</i></a> Price</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Ricotta</td>
+              <td>$4.2</td>
+            </tr>
+            <tr>
+              <td>"Canned" vegetables</td>
+              <td>$3.7</td>
+            </tr>
+            <tr>
+              <td>Funky cheese fondue</td>
+              <td>$3.4</td>
+            </tr>
+            <tr>
+              <td>Lobster toast</td>
+              <td>$5.7</td>
+            </tr>
+            <tr>
+              <td>Tost & Caviar</td>
+              <td>$2.00</td>
+            </tr>
+            <tr>
+              <td>Clothesline bacon</td>
+              <td>$7.00</td>
+            </tr>
+            <tr>
+              <td>Chicken fried mushrooms</td>
+              <td>$2.45</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="row center-align">
+        <ul class="pagination">
+          <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+          <li class="active red darken-3"><a href="#!">1</a></li>
+          <li class="waves-effect"><a href="#!">2</a></li>
+          <li class="waves-effect"><a href="#!">3</a></li>
+          <li class="waves-effect"><a href="#!">4</a></li>
+          <li class="waves-effect"><a href="#!">5</a></li>
+          <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="parallax-container">
+    <div class="parallax"><img src="img/outdoor.jpeg"></div>
+  </div>
+
+  <div class="jumbatron z-depth-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l10 offset-l1">
+          <div class="main-container">
+            <div class="table-container">
+              <table class="striped" id="table1">
+                <h3 class="center-align">Contact Us</h3>
+                <thead id="table-head">
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="form-container z-depth-3">
+              <h4>Fill The Data</h4>
+              <div class="form">
+                <div class="input-field">
+                  <input id="name" type="text" class="validate" required>
+                  <label for="name">Name</label>
+                </div>
+                <div class="input-field">
+                  <input id="phone" type="number" class="validate" required>
+                  <label for="phone">Phone</label>
+                </div>
+                <a id="btnSave" class="waves-effect waves-light btn"><i class="material-icons right">file_download</i>Save</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+     $('#modal1').modal('open');
+  </script>
+
+  <script>
+    var first_name = localStorage.getItem('first_name');
+    var email = localStorage.getItem('email');
+
+    console.log(first_name);
+    console.log(email);
+
+    document.getElementById('first_name').innerHTML = first_name;
+    document.getElementById('email').innerHTML = email;
+  </script>
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  
+  <script src="js/contactTable.js" charset="utf-8"></script>
+
+  <script>
+    $('.brand-logo').sideNav({
+      menuWidth: 300, // Default is 300
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true, // Choose whether you can drag to open on touch screens,
+      onOpen: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is opened
+      onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
+    });
+  </script>
+
+  <script>
+    $('.carousel.carousel-slider').carousel({fullWidth: true});
+  </script>
+
+  <script>
+    $(document).ready(function(){
+      // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+      $('.modal').modal();
+    });
+  </script>
+
+  <script>
+    $(document).ready(function(){
+      $('.scrollspy').scrollSpy();
+    });
+  </script>
+
+  <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+  </script>
+
+  <script>
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+  </script>
+
+  <script>
+    function sortTable(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("myTable");
+      switching = true;
+
+      dir = "asc"; 
+
+      while (switching) {
+
+        switching = false;
+        rows = table.getElementsByTagName("TR");
+
+        for (i = 1; i < (rows.length - 1); i++) {
+
+          shouldSwitch = false;
+
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+
+              shouldSwitch= true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+
+              shouldSwitch= true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+
+          switchcount ++; 
+        } else {
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

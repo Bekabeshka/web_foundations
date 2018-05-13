@@ -1,0 +1,72 @@
+body *{
+	margin: 0 auto;
+}
+
+.triangle3d {
+	position: absolute;
+	top: 300px;
+	left: 300px;
+	perspective: 1000px;
+	perspective-origin: center -300px;
+}
+
+.content{
+	width: 100px;
+	position: relative;
+	transform-style: preserve-3d;
+	animation: spin 10s infinite linear;
+}
+
+.vertical{
+	border: 100px solid transparent;
+	position: absolute;
+}
+
+.front{
+	bottom: 120px;
+	border-bottom: 200px solid yellow;
+	transform: translateZ(25px) rotateX(30deg);
+	opacity: 0.5;
+}
+
+.back{
+	bottom: 120px;
+	border-bottom: 200px solid green;
+	transform: translateZ(-25px) rotateY(180deg) rotateX(30deg);
+	opacity: 0.5;
+}
+
+.left{
+	bottom: 120px;
+	left: 175px;
+	border-bottom: 200px solid blue;
+	transform: translateX(-100px) translateZ(-100px) rotateY(270deg) rotateX(30deg);
+	transform-origin: center left; 
+	opacity: 0.5;
+}
+
+.right{
+	bottom: 100px;
+	right: 150px;
+	border-bottom: 200px solid purple;
+	transform: translateX(100px) translateZ(-100px) rotateY(-270deg) rotateX(30deg);
+	transform-origin: top right;
+	opacity: 0.5;
+}
+
+.bottom{
+	width: 200px;
+	border-bottom: 200px solid black;
+	transform: rotateX(90deg) translateY(100px) translateZ(140px);
+	transform-origin: bottom center;
+	opacity: 0.5;
+}
+
+@keyframes spin{
+	from{
+		transform: rotateY(0);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+}

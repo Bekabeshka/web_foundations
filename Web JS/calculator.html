@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+</head>
+<body>
+	<div id="calc"></div>
+</body>
+
+<script type="text/javascript">
+	function Calculator() {}
+
+	Calculator.prototype.doAll = function() {
+
+
+		var form = document.createElement('form');
+
+		var br1 = document.createElement('br');
+		var br2 = document.createElement('br');
+
+		var radio1 = document.createElement('input');
+		radio1.type = 'radio';
+		radio1.name = 'system';
+		radio1.checked = true;
+		
+		var label1 = document.createElement('label');
+		label1.innerHTML = 'Decimal';
+		form.appendChild(radio1);
+		form.appendChild(label1);
+		form.appendChild(br1);
+
+		var radio2 = document.createElement('input');
+		radio2.name = 'system';
+		radio2.type = 'radio';
+		
+		var label2 = document.createElement('label');
+		label2.innerHTML = 'Binary';
+		form.appendChild(radio2);	
+		form.appendChild(label2);
+		form.appendChild(br2);
+
+		var label3 = document.createElement('label');
+		var radio3 = document.createElement('input');
+		radio3.name = 'system';
+		radio3.type = 'radio';
+		
+		label3.innerHTML = 'Octal';
+		form.appendChild(radio3);
+		form.appendChild(label3);
+
+		document.getElementById('calc').appendChild(form);
+
+		var input = document.createElement('input');
+		document.getElementById('calc').appendChild(input);
+
+		var plus = document.createElement("button");
+		var minus = document.createElement("button");
+		var divide = document.createElement("button");
+		var multiply = document.createElement("button");
+		var equal = document.createElement("button");
+
+		var text = document.createTextNode("+");
+		plus.appendChild(text);
+
+		text = document.createTextNode("-");
+		minus.appendChild(text);
+
+		text = document.createTextNode("/");
+		divide.appendChild(text);
+
+		text = document.createTextNode("*");
+		multiply.appendChild(text);
+
+		text = document.createTextNode("=");
+		equal.appendChild(text);
+
+		document.getElementById("calc").appendChild(plus);
+		document.getElementById("calc").appendChild(minus);
+		document.getElementById("calc").appendChild(divide);
+		document.getElementById("calc").appendChild(multiply);
+		document.getElementById("calc").appendChild(equal);
+
+		var operation = '+';
+		var result;
+
+		plus.onclick = function() {
+			operation = '+';
+			input.value += operation;
+		}
+		minus.onclick = function() {
+			operation = '-';
+			input.value += operation;
+		}
+		divide.onclick = function() {
+			operation = '/';
+			input.value += operation;
+		}
+		multiply.onclick = function() {
+			operation = '*';
+			input.value += operation;
+		}
+
+		equal.onclick = function() {
+			var arr = input.value.split(operation);
+
+			if (radio1.checked) {
+				switch(operation) {
+					case '+': result = parseInt(arr[0]) + parseInt(arr[1]);
+					break;
+					case '-': result = parseInt(arr[0]) - parseInt(arr[1]);
+					break;
+					case '/': result = parseInt(arr[0]) / parseInt(arr[1]);
+					break;
+					case '*': result = parseInt(arr[0]) * parseInt(arr[1]);
+					break;
+				}
+				input.value = result;
+			} else if (radio2.checked) {
+			
+				switch(operation) {
+					case '+': result = parseInt(arr[0], 2) + parseInt(arr[1], 2);
+					break;
+					case '-': result = parseInt(arr[0], 2) - parseInt(arr[1], 2);
+					break;
+					case '/': result = parseInt(arr[0], 2) / parseInt(arr[1], 2);
+					break;
+					case '*': result = parseInt(arr[0], 2) * parseInt(arr[1], 2);
+					break;
+				}
+				input.value = result.toString(2);
+				console.log(parseInt(arr[0], 2));
+				console.log(parseInt(arr[1], 2));
+				
+			} else if (radio3.checked) {
+				switch(operation) {
+					case '+': result = parseInt(arr[0], 8) + parseInt(arr[1], 8);
+					break;
+					case '-': result = parseInt(arr[0], 8) - parseInt(arr[1], 8);
+					break;
+					case '/': result = parseInt(arr[0], 8) / parseInt(arr[1], 8);
+					break;
+					case '*': result = parseInt(arr[0], 8) * parseInt(arr[1], 8);
+					break;
+				}
+				input.value = result.toString(8);
+			}
+			
+		}
+	}
+
+
+	var calculator = new Calculator();
+	calculator.doAll();
+	
+</script>
+</html>

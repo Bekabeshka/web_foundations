@@ -1,0 +1,76 @@
+body {
+	margin: 0px;
+	padding: 50px 50px 50px 50px;
+}
+
+button {
+	margin-right: 20px;
+	display: flex;
+}
+
+.first {
+	width: 100px;
+	height: 50px;
+	border-radius: 2px;
+	border-style: dashed;
+	border-color: #E15554;
+	background-color: #fff;
+	transition: .2s linear;
+	font-family: 'Oswald', sans-serif;
+}
+
+.first:hover, .first:active {
+	transform: scale(1.1);
+}
+
+.second {
+	color: #fff;
+	background-color: #ff2b4a;
+	border-color: transparent;
+	border-radius: 0;
+	padding: 10px 60px;
+	font-size: 16px;
+	transition:.3s ease-in-out;
+	font-family: 'Slabo 27px', serif;
+}
+
+.second:active, .second:hover  {
+	background:#002453;
+	color:#fff;
+}
+
+.third {
+	width: 80px;
+	height: 80px;
+	border-width: 2px;
+	border-radius: 50px;
+	border-style: solid;
+	border-color: #372554;
+	background-color: #372554;
+	font-family: 'Nosifer', cursive;
+	color: #fff;
+	transition:.7s ease-out;	
+}
+
+.third:hover, .third:active {
+	background-color: #231123;
+	border-color: #231123;
+}
+
+.fourth {
+	background-color: rgba(0,0,0,0);
+	width: 100px;
+	height: 60px;
+	border-radius: 8px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000;
+	box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+	transition: .8s ease;
+	font-family: 'Slabo 27px', serif;
+	font-size: 18px;
+}
+
+.fourth:hover, .fourth:active {
+	transform: rotate(-10deg);
+}

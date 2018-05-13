@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  <title>Sign Up</title>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4 style="color: #c62828">Wrong</h4>
+      <p>Check the correctness of inputs</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
+
+  <div id="home" class="home"></div> 
+  <div class="container">
+    <div class="row">
+      <div class="col l10 offset-l1">
+        <div class="card z-depth-4 center">
+          <h1 class="thin">Registration</h1>
+
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="first_name" type="text" class="validate">
+                  <label for="first_name">Login</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name" type="text" class="validate">
+                  <label for="last_name">First Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="password" type="password" class="validate">
+                  <label for="password">Password</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="password_repeat" type="password" class="validate">
+                  <label for="password">Repeat Password</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="email" type="email" class="validate">
+                  <label for="email" data-error="wrong" data-success="right">Email</label>
+                </div>
+              </div>
+              <a onclick="validate()" class="waves-effect waves-light btn red darken-3">Sign Up</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+
+    function validate() {
+
+      localStorage.clear();
+
+      var cnt = true;
+      
+      var first_name = document.getElementById('first_name').value;
+      var last_name = document.getElementById('last_name').value;
+      var password = document.getElementById('password').value;
+      var password_repeat = document.getElementById('password_repeat').value;
+      var email = document.getElementById('email').value;
+
+      if (first_name != null && first_name != "") {
+        localStorage.setItem('first_name', first_name);
+      } else {
+        $('#modal1').modal('open');
+        cnt = false;
+        return;
+      }
+
+      if (last_name != null && last_name != "") {
+        localStorage.setItem('last_name', last_name);
+      } else {
+        cnt = false;
+        $('#modal1').modal('open');
+        return;
+      }
+
+      if (password != null && password != "") {
+        if (password.localeCompare(password_repeat) == 0) {
+          localStorage.setItem('password', password);
+        } else {
+          cnt = false;
+          $('#modal1').modal('open');
+          return;
+        }
+      } else {
+        cnt = false;
+        $('#modal1').modal('open');
+        return;
+      }
+
+      if (email != null && email != "") {
+        localStorage.setItem('email', email);
+      } else {
+        cnt = false;
+        $('#modal1').modal('open');
+      }
+
+      if (cnt) {
+        console.log(first_name);
+        console.log(last_name);
+        console.log(password);
+        console.log(email);
+        location.href = 'login.html';
+      }
+    }
+
+  </script>
+  
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#modal1').openModal({
+        dismissible:false
+      });
+    });
+  </script>
+
+  <script>
+    $('#modal1').closeModal({ dismissible: true});
+  </script>
+
+  <script>
+    $(document).ready(function(){
+      // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+      $('.modal').modal();
+    });
+  </script>
+
+</body>
+</html>

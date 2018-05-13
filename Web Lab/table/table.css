@@ -1,0 +1,10 @@
+td {
+	width: 100px;
+	height: 50px;
+}
+
+table * {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000;
+}
